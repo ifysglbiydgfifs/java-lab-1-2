@@ -32,9 +32,8 @@ public class PostsViewController {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String list(Model model) {
-        // Добавление списка постов в модель
         model.addAttribute("appName", "Мое супер-приложение");
         model.addAttribute("posts", postService.listAllPosts());
-        return "list"; // Возвращаем представление "list"
+        return "list";
     }
 }
